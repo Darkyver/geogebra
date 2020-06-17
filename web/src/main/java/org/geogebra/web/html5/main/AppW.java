@@ -1138,6 +1138,7 @@ public abstract class AppW extends App implements SetLabels, HasLanguage {
 
 		resetUI();
 		resetPenTool();
+		Browser.resetUrl();
 	}
 
 	private void resetPages() {

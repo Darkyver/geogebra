@@ -568,6 +568,18 @@ public class Browser {
 	}-*/;
 
 	/**
+	 * Strip url from parameters.
+	 */
+	public static native void resetUrl() /*-{
+		try {
+				$wnd.history.pushState({}, $doc.title, $doc.location.pathname);
+			} catch (e) {
+				// on dev server trying to push production URL
+			}
+
+	}-*/;
+
+	/**
 	 * Opens GeoGebraTube material in a new window
 	 *
 	 * @param url
