@@ -571,8 +571,9 @@ public class Browser {
 	 * Strip url from parameters.
 	 */
 	public static native void resetUrl() /*-{
+		$wnd.parent.postMessage('{"action": "resetUrl"}', '*');
 		try {
-				$wnd.history.pushState({}, $doc.title, $doc.location.pathname);
+				$wnd.history.replaceState({}, $doc.title, $doc.location.pathname);
 			} catch (e) {
 				// on dev server trying to push production URL
 			}
