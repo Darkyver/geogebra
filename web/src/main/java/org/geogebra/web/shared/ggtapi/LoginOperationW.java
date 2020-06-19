@@ -79,7 +79,9 @@ public class LoginOperationW extends LogInOperation {
 						function(event) {
 							var data;
 							//later if event.origin....
+
 							if (typeof event.data == "string") {
+
 								try {
 									data = $wnd.JSON.parse(event.data);
 

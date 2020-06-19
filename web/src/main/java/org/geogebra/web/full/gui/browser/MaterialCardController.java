@@ -84,6 +84,7 @@ public class MaterialCardController implements OpenFileListener {
 	 */
 	public void loadOnlineFile() {
 		if (!StringUtil.empty(getMaterial().getFileName())) {
+			Browser.resetUrl();
 			load();
 			return;
 		}
@@ -109,6 +110,7 @@ public class MaterialCardController implements OpenFileListener {
 					loadMaterial();
 
 					updateActiveMaterial();
+					Browser.resetUrl();
 				} else {
 					app.showError(Errors.LoadFileFailed);
 				}
