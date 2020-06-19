@@ -744,6 +744,7 @@ public abstract class AppW extends App implements SetLabels, HasLanguage {
 		AlgebraSettings algebraSettings = getSettings().getAlgebra();
 		algebraSettings.setModeChanged(false);
 		clearMedia();
+
 		try {
 			loadFile(archiveContent, asSlide);
 		} catch (Exception e) {
